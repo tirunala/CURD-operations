@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <fieldset>
+        <legend>edit form</legend>
+        <form action="/update/{{ employee.id }}">
+           Enter Employee Id:
+           <input type="text" name="id" value="{{ employee.id }}"><br><br>
+           Enter Employee Name:
+           <input type="text" name="name" value="{{ employee.name }}"><br><br>
+           Enter Employee Salaray:
+           <input type="text" name="salary" value="{{ employee.sal }}"><br><br>
+           Enter Employee Department Number:
+           <input type="text" name="dno" value="{{ employee.dno }}"><br><br>
+           <input type="submit" value="update">
+       </form>
+    </fieldset>
+</body>
+</html>

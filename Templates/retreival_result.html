@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="2px" width="50%">
+        <caption>Employee Data</caption>
+        <tr>
+            <th>Eid</th>
+            <th>Ename</th>
+            <th>Esal</th>
+            <th>Dno</th>
+            <th>Actions</th>
+        </tr>
+        {% for rec in records %}
+             <tr>
+                 <td>{{ rec.id }}</td>
+                 <td>{{ rec.name }}</td>
+                 <td>{{ rec.sal }}</td>
+                 <td>{{ rec.dno }}</td>
+                 <td>
+                     <a href="/edit/{{rec.id}}">Update</span></a> &emsp;
+                     <a href="/delete/{{rec.id}}">Delete</a>
+                 </td>
+             </tr>
+        {% endfor %}
+    </table>
+<br>
+<a href="/in">Click here to insert another employee data</a>
+</body>
+</html>
